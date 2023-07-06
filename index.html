@@ -202,39 +202,150 @@
           Energia Solar
         </div>  
       </div>
-      <div class="alinhador" ng-show="arcondicionado">
-        <?php while ($row = $ar->fetch_assoc()) { ?>
+      <div class="alinhador" ng-show="arcondicionado" id="arcondicionado">
+        <!-- <?php while ($row = $ar->fetch_assoc()) { ?>
           <a href="produto_detalhes.php?id=<?php echo $row['id']; ?>" role="button">
               <img src="img/<?php echo $row['imagem']; ?>" alt="imagem de ar condicionado">
           </a>
-        <?php } ?>
+        <?php } ?> -->
       </div>
     
     
-      <div class="alinhador" ng-show="inverter">
-      <?php while ($row = $inverter->fetch_assoc()) { ?>
+      <div class="alinhador" ng-show="inverter" id="inverter">
+      <!-- <?php while ($row = $inverter->fetch_assoc()) { ?>
           <a href="produto_detalhes.php?id=<?php echo $row['id']; ?>" role="button">
               <img src="img/<?php echo $row['imagem']; ?>" alt="imagem de ar condicionado inverter">
           </a>
-        <?php } ?>
+        <?php } ?> -->
       </div>
     
-      <div class="alinhador" ng-show="multisplit">
-      <?php while ($row = $multi->fetch_assoc()) { ?>
+      <div class="alinhador" ng-show="multisplit" id="multisplit">
+      <!-- <?php while ($row = $multi->fetch_assoc()) { ?>
           <a href="produto_detalhes.php?id=<?php echo $row['id']; ?>" role="button">
               <img src="img/<?php echo $row['imagem']; ?>" alt="imagem de ar condicionado multisplit">
           </a>
-        <?php } ?>
+        <?php } ?> -->
       </div>
     
-      <div class="alinhador" ng-show="energiasolar">
-      <?php while ($row = $solar->fetch_assoc()) { ?>
+      <div class="alinhador" ng-show="energiasolar" id="energiasolar">
+      <!-- <?php while ($row = $solar->fetch_assoc()) { ?>
           <a href="produto_detalhes.php?id=<?php echo $row['id']; ?>" role="button">
               <img src="img/<?php echo $row['imagem']; ?>" alt="imagem de placa solar">
           </a>
-        <?php } ?>
+        <?php } ?> -->
       </div>
-    
+      
+      <script>
+      // Obtendo a referência do elemento <div>
+      var divArCondicionado = document.getElementById("arcondicionado");
+
+      // Filtrando os produtos de ar condicionado da matriz db.tbprodutos
+      var produtosArCondicionado = db.tbprodutos.filter(function(produto) 
+      {
+        return produto.id_tipo === 1;
+      });
+
+      // Percorrendo os produtos filtrados e gerando o conteúdo dinamicamente
+      produtosArCondicionado.forEach(function(produto) {
+        // Criando um elemento <a>
+        var link = document.createElement("a");
+        link.href = "produto_detalhes.php?id=" + produto.id;
+        link.role = "button";
+
+        // Criando um elemento <img>
+        var img = document.createElement("img");
+        img.src = "img/" + produto.imagem;
+        img.alt = "imagem de " + produto.nome;
+
+        // Adicionando a imagem como filho do link
+        link.appendChild(img);
+
+        // Adicionando o link como filho da <div> alinhador
+        divArCondicionado.appendChild(link);
+      });
+
+      // Obtendo a referência do elemento <div>
+      var divInverter = document.getElementById("inverter");
+
+      // Filtrando os produtos de ar condicionado da matriz db.tbprodutos
+      var produtosInverter = db.tbprodutos.filter(function(produto) {
+        return produto.id_tipo === 2;
+      });
+
+      // Percorrendo os produtos filtrados e gerando o conteúdo dinamicamente
+      produtosInverter.forEach(function(produto) {
+        // Criando um elemento <a>
+        var link = document.createElement("a");
+        link.href = "produto_detalhes.php?id=" + produto.id;
+        link.role = "button";
+
+        // Criando um elemento <img>
+        var img = document.createElement("img");
+        img.src = "img/" + produto.imagem;
+        img.alt = "imagem de " + produto.nome;
+
+        // Adicionando a imagem como filho do link
+        link.appendChild(img);
+
+        // Adicionando o link como filho da <div> alinhador
+        divInverter.appendChild(link);
+      });
+
+      // Obtendo a referência do elemento <div>
+      var divSplit = document.getElementById("multisplit");
+
+      // Filtrando os produtos de ar condicionado da matriz db.tbprodutos
+      var produtosSplit = db.tbprodutos.filter(function(produto) {
+        return produto.id_tipo === 3;
+      });
+
+      // Percorrendo os produtos filtrados e gerando o conteúdo dinamicamente
+      produtosSplit.forEach(function(produto) {
+        // Criando um elemento <a>
+        var link = document.createElement("a");
+        link.href = "produto_detalhes.php?id=" + produto.id;
+        link.role = "button";
+
+        // Criando um elemento <img>
+        var img = document.createElement("img");
+        img.src = "img/" + produto.imagem;
+        img.alt = "imagem de " + produto.nome;
+
+        // Adicionando a imagem como filho do link
+        link.appendChild(img);
+
+        // Adicionando o link como filho da <div> alinhador
+        divSplit.appendChild(link);
+      });
+
+      // Obtendo a referência do elemento <div>
+      var divEnergiasolar = document.getElementById("energiasolar");
+
+      // Filtrando os produtos de ar condicionado da matriz db.tbprodutos
+      var produtosEnergiasolar = db.tbprodutos.filter(function(produto) {
+        return produto.id_tipo === 1;
+      });
+
+      // Percorrendo os produtos filtrados e gerando o conteúdo dinamicamente
+      produtosEnergiasolar.forEach(function(produto) {
+        // Criando um elemento <a>
+        var link = document.createElement("a");
+        link.href = "produto_detalhes.php?id=" + produto.id;
+        link.role = "button";
+
+        // Criando um elemento <img>
+        var img = document.createElement("img");
+        img.src = "img/" + produto.imagem;
+        img.alt = "imagem de " + produto.nome;
+
+        // Adicionando a imagem como filho do link
+        link.appendChild(img);
+
+        // Adicionando o link como filho da <div> alinhador
+        divEnergiasolar.appendChild(link);
+      });
+      </script>
+
       <script>
       var app = angular.module('meuApp', []);
       app.controller('meuController', function($scope) {
