@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ar Condicionado</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+<body ng-app="meuApp" ng-controller="meuController">
+
+    <!-- INÍCIO HEADER -->
+    <header id="header">
+        <picture>
+          <a href="index.php">
+            <div>Logo</div>
+          </a>
+        </picture>
+        <nav>
+          <div>
+            <ul>
+              <li><a href="#home">HOME</a></li>
+              <li><a href="#produtos">PRODUTOS</a></li>
+              <li><a href="#missao">MISSÃO</a></li>
+              <li><a href="#sobre">SOBRE NÓS</a></li>
+              <li><a href="#contato">CONTATO</a></li>
+            </ul>
+          </div>
+        </nav>
+    </header>
+    <!-- FIM HEADER -->
+
+    <!-- INÍCIO ÁREA INICIAL -->
+    <section id="area_inicial">
+        <div class="img-inicial">
+            <img src="img/energia_solar.png" alt="imagem de ar condicionado" id="imagem_ar">
+        </div>
+        <div>
+            <div id="txt-inicial">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                <img src="img/linha.svg" alt="linha decorativa do texto">
+            </div>
+        </div>
+    </section>
+    <!-- FIM ÁREA INICIAL -->
+
+    <!-- INÍCIO MISSÃO-->
+    <div class="alinha-missao fundo_amarelo">
+        <div>
+          <img src="img/medalhinha.jpg" alt="" class="medalha">
+          <h4>Missão</h4>
+          <p>Texto</p>
+        </div>
+        <div>
+          <img src="img/medalhinha.jpg" alt="" class="medalha">
+          <h4>Visão</h4>
+          <p>Texto</p>
+        </div>
+        <div>
+          <img src="img/medalhinha.jpg" alt="" class="medalha">
+          <h4>Valores</h4>
+          <p>Texto</p>
+        </div>
+    </div>
+    <!-- FIM MISSÃO-->
+
+    <!-- INÍCIO SERVIÇOS-->
+    <section>
+        <article>
+          <h1 id="texto_serv">Serviços</h1>
+          <div id="linha_serv" class="alinhar">
+            <img src="img/linha.svg" alt="linha decorativa do texto" style="width: 200px;">
+          </div>
+        </article>
+        <div style="display: flex; justify-content:center; margin-top: 40px;">
+          <div class="xadrez">
+            <!-- INÍCIO PARTE UM -->
+            
+            <picture>
+              <img src="img/serviços/InstalandoPainelSolar.jpg" alt="instalando painel solar">
+            </picture>
+            <div>
+              <p>texto</p>
+            </div>
+            <picture>
+              <img src="img/serviços/InstalandoPainelSolar.jpg" alt="instalando ar condicionado">
+            </picture>
+            <div>
+              <p>texto</p>
+            </div>
+            <picture>
+              <img src="img/serviços/InstalandoPainelSolar.jpg" alt="instalando painel solar">
+            </picture>
+            <div>
+              <p>texto</p>
+            </div>
+            
+    
+            <!-- FIM PARTE UM -->
+    
+            <!-- INÍCIO PARTE DOIS -->
+    
+            <div>
+              <p>texto</p>
+            </div>
+            <picture>
+              <img src="img/serviços/InstalandoPainelSolar.jpg" alt="instalando ar condicionado">
+            </picture>
+            <div>
+              <p>texto</p>
+            </div>
+            <picture>
+              <img src="img/serviços/InstalandoPainelSolar.jpg" alt="instalando painel solar">
+            </picture>
+            <div>
+              <p>texto</p>
+            </div>
+            <picture>
+              <img src="img/serviços/InstalandoPainelSolar.jpg" alt="instalando ar condicionado">
+            </picture>
+          
+          <!-- FIM PARTE DOIS -->
+    
+          </div>
+        </div>
+    </section>
+    <!-- FIM SERVIÇOS -->
+
+    <!-- INÍCIO SOBRE MIM -->
+    <section class="fundocinza" id="sobre">
+        <div id="txt-sobre">
+          <div class="teste">
+            <section>
+              <h1 style="font-size: 20pt;">Sobre Nós</h1>
+              <img src="img/linha.svg" alt="linha decorativa do texto" class="linhadsobre">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet laborum corrupti reprehenderit sapiente, a repellendus quisquam ea, eaque rem modi illum iusto eos beatae autem error rerum earum deleniti dolorem!</p>
+            </section>
+          </div>
+        </div>
+        <div id="logo-sobre">
+          <div>
+            <div>Logo</div>
+          </div>
+        </div>
+    </section>
+    <!-- FIM SOBRE MIM -->
+
+    <!-- INÍCIO PRODUTOS -->
+    <div style="padding-top: 50px;">
+        <h1 class="alinhar">Produtos</h1>
+      </div>
+      <div class="alinhar">
+        <img src="img/linha.svg" alt="linha decorativa do texto" style="width: 200px;">
+      </div>
+    
+      <div class="linha w50"> <!-- BOTÕES -->
+        <div ng-mouseover="funcaoArcondicionado()" class="borda">
+          Ar Condicionado
+        </div>
+        <div ng-mouseover="funcaoInverter()" class="borda">
+          Ar Condicionado Inverter 
+        </div>
+        <div ng-mouseover="funcaoMultisplit()" class="borda">
+          Multi Split
+        </div>
+        <div ng-mouseover="funcaoEnergiasolar()" class="borda">
+          Energia Solar
+        </div>  
+      </div>
+      <div class="alinhador" ng-show="arcondicionado">
+        <?php while ($row = $ar->fetch_assoc()) { ?>
+          <a href="produto_detalhes.php?id=<?php echo $row['id']; ?>" role="button">
+              <img src="img/<?php echo $row['imagem']; ?>" alt="imagem de ar condicionado">
+          </a>
+        <?php } ?>
+      </div>
+    
+    
+      <div class="alinhador" ng-show="inverter">
+      <?php while ($row = $inverter->fetch_assoc()) { ?>
+          <a href="produto_detalhes.php?id=<?php echo $row['id']; ?>" role="button">
+              <img src="img/<?php echo $row['imagem']; ?>" alt="imagem de ar condicionado inverter">
+          </a>
+        <?php } ?>
+      </div>
+    
+      <div class="alinhador" ng-show="multisplit">
+      <?php while ($row = $multi->fetch_assoc()) { ?>
+          <a href="produto_detalhes.php?id=<?php echo $row['id']; ?>" role="button">
+              <img src="img/<?php echo $row['imagem']; ?>" alt="imagem de ar condicionado multisplit">
+          </a>
+        <?php } ?>
+      </div>
+    
+      <div class="alinhador" ng-show="energiasolar">
+      <?php while ($row = $solar->fetch_assoc()) { ?>
+          <a href="produto_detalhes.php?id=<?php echo $row['id']; ?>" role="button">
+              <img src="img/<?php echo $row['imagem']; ?>" alt="imagem de placa solar">
+          </a>
+        <?php } ?>
+      </div>
+    
+      <script>
+      var app = angular.module('meuApp', []);
+      app.controller('meuController', function($scope) {
+        $scope.arcondicionado = true;
+        $scope.inverter = false;
+        $scope.multisplit = false;
+        $scope.energiasolar = false;
+    
+        $scope.funcaoArcondicionado = function() {
+          $scope.arcondicionado = true;
+          $scope.inverter = false;
+          $scope.multisplit = false;
+          $scope.energiasolar = false;
+        }
+    
+        $scope.funcaoInverter = function() {
+          $scope.arcondicionado = false;
+          $scope.inverter = true;
+          $scope.multisplit = false;
+          $scope.energiasolar = false;
+        }
+    
+        $scope.funcaoMultisplit = function() {
+          $scope.arcondicionado = false;
+          $scope.inverter = false;
+          $scope.multisplit = true;
+          $scope.energiasolar = false;
+        }
+    
+        $scope.funcaoEnergiasolar = function() {
+          $scope.arcondicionado = false;
+          $scope.inverter = false;
+          $scope.multisplit = false;
+          $scope.energiasolar = true;
+        }
+      });
+      </script>
+    <!-- FIM PRODUTOS -->
+
+    <!-- INÍCIO CONTATO -->
+    <section id="contato">
+        <div id="imagem_contato">
+          <img src="img/ar_condicionado.png" alt="imagem ar condicionado" class="imagem_contato">
+        </div>
+        <article>
+          <div id="titulo-contato">
+            <p>Contato</p>
+            <img src="img/linha.svg" alt="linha decorativa do texto" class="linhadcontato">
+          </div>
+          <div id="forma_contato">
+            <div>
+              <h4>Endereço</h4>
+            </div>
+            <div>
+              <h4>Contato</h4>
+            </div>
+          </div>
+          
+          <div id="formulario" class="ml mt">
+            <form action="submit">
+                <input type="text" ng-model="nome" placeholder="Digite seu Nome" class="borda_c">
+                <input type="email" ng-model="email" placeholder="Digite seu E-mail" class="borda_c">
+            </form>
+            <form>
+                <textarea name="mensagem" id="mensagem" rows="1" cols="49" placeholder="Mensagem" class="mt borda_c"></textarea>
+            </form>
+            <div id="btn-contato">
+              <input type="button" action="submit" value="Enviar" id="button"> 
+            </div>
+        </div>
+        </article>
+    </section>
+    <!-- FIM CONTATO -->
+</body>
+</html>

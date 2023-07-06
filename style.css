@@ -1,0 +1,437 @@
+/* INÍCIO RESET  */
+*
+{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+/* FIM RESET */
+
+/* INÍCIO USO GERAL */
+.alinhar
+{
+   display: flex;
+   justify-content: space-around;
+   text-align: center;
+}
+
+.linhad
+{
+   width: 20%;
+}
+
+body
+{
+   cursor: url(img/cursorum.cur), default;
+   background-color: #fff;
+   font-family: Arial, Helvetica, sans-serif;
+}
+
+body a
+{
+   cursor: url(img/cursordois.cur), pointer;
+}
+/* FIM USO GERAL */
+
+
+/* INÍCIO MENU */
+#header
+{
+   background-color: #e9edf0;
+   display: flex;
+   padding-right: 10px;
+   padding-left: 10px;
+   padding-top: 3px;
+   padding-bottom: 10px;
+}
+
+#header picture
+{
+   display:inline-block; 
+   width:50%;
+}
+
+#header picture a
+{
+   text-decoration: none; 
+   color: black; 
+   font-size: 30pt;
+}
+
+#header picture a div
+{
+   width: 160px; 
+   height: 95px; 
+   border: 1px solid black; 
+   display: flex; 
+   justify-content:center;
+   align-items:center;
+}
+
+#header nav
+{
+   display:inline-block; 
+   width:50%;
+}
+
+#header nav div
+{
+   display:flex; 
+   align-items:center; 
+   height:100%;
+}
+
+#header nav div ul li
+{
+   display:inline-block;
+}
+
+#header nav div ul li a
+{
+   text-decoration:none; 
+   color:black;
+   padding: 12px;
+}
+
+#header nav div ul li a:hover
+{
+   border: solid 2px;
+}
+/* FIM MENU */
+
+/* INÍCIO ÁREA INICIAL */
+#area_inicial
+{
+   display: flex;
+   padding-left: 10px;
+   padding-right: 10px;
+   padding-bottom: 95px;
+   padding-top: 95px;
+   background-color: #e9edf0;
+}
+
+#area_inicial div
+{
+   width: 50%;
+   display: flex;
+   align-items: center;
+}
+
+#imagem_ar
+{
+   width: 100%;
+   height: 100%;
+}
+
+#txt-inicial 
+{
+   display: flex;
+   flex-direction: column;
+   justify-content: center; 
+   align-items: center;
+   margin-left: 80px;
+}
+
+#txt-inicial p
+{
+   max-width:  200px;
+}
+
+#txt-inicial img
+{
+   width: 150px;
+}
+
+/* FIM ÁREA INICIAL */
+
+/* INÍCIO ÁREA MISSÃO */
+
+.alinha-missao
+{
+   display: flex;
+   justify-content: space-evenly;
+}
+
+
+.fundo_amarelo
+{
+   background-color: #ffcb01;
+   margin-bottom: 1%;
+   padding-top: 2.5%;
+   padding-bottom: 5%;
+}
+
+.fundo_amarelo div
+{
+   text-align: center;
+}
+
+.medalha
+{
+   width: 100px;
+}
+
+/* FIM ÁREA MISSÃO */
+
+/* INÍCIO SERVIÇOS */
+#texto_serv
+{
+   text-align: center;
+   position: relative;
+   font-size: 30px;
+}
+
+#linha_serv
+{
+   width: 100%;
+}
+
+.xadrez
+{
+   display: grid;
+   grid-template-columns: repeat(6, 1fr);;
+   grid-template-rows: 2;
+   row-gap: 0;
+   column-gap: 0;
+   width: 70%;
+}
+
+.xadrez picture img
+{
+   width: 100%;
+   height: 100%;
+}
+
+.xadrez div
+{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+/* FIM SERVIÇOS */
+
+/* INÍCIO SOBRE */
+
+.linhadsobre
+{
+   width: 150px;
+   margin-top: -20px;
+}
+
+#sobre
+{
+   padding-top: 100px;
+   /* padding-bottom: 50px; */
+   display: flex;
+   width: 100%;
+}
+
+#txt-sobre
+{
+   display: inline-block;
+   width: 60%;
+}
+
+#txt-sobre div
+{
+   display: flex;
+   text-align: center;
+   justify-content: flex-end;
+}
+
+#txt-sobre div section
+{
+   margin-left: 100px;
+}
+
+#txt-sobre div section p
+{
+   width: 400px;
+}
+
+#logo-sobre
+{
+   display: inline-block;
+   width: 40%;
+}
+
+#logo-sobre div
+{
+   width: 100%;
+   height: 100%;
+   justify-content: center; 
+   align-items:center;
+   text-align:center;
+   display: flex;
+}
+
+#logo-sobre div div
+{
+   width: 220px;
+   height: 150px;
+   border: 1px solid black;
+   display: flex;
+   justify-content:center;
+   align-items:center;
+   font-size:50pt;
+}
+
+.fundocinza
+{
+   background-color: #efefef;
+   padding-bottom: 100px;
+}
+/* FIM SOBRE */
+
+/* INÍCIO PRODUTOS */
+.alinhador
+{
+   display: flex;
+}
+
+.alinhador a
+{
+   display: inline-block;
+   text-align: center;
+}
+
+.alinhador a img
+{
+   width: 70%;
+}
+
+.linha
+{
+   display: flex;
+   justify-content: space-around;
+}
+
+.w50
+{
+   width: 50%;
+   margin: 20px auto;
+}
+
+.borda
+{
+   padding: 10px;
+}
+
+.borda:hover
+{
+   border-color: black;
+   border-style: solid;
+   border-width: 3px;
+   padding: 5px;
+   cursor: url(img/cursordois.cur), pointer;
+}
+
+/* inicio imagens produtos */
+
+.tamanho_imagem
+{
+   width: 50%;
+   border-color: black;
+   border-style: solid;
+   border-width: 1px;
+}
+/* fim imagens produtos */
+
+/* FIM PRODUTOS */
+
+/* INÍCIO CONTATO */
+#contato
+{
+   display: flex;
+   background-color: #eeeff3;
+   padding-top: 15px;
+   margin-top: 15px;
+}
+#imagem_contato
+{
+   width: 50%;
+   display: inline-block;
+}
+.imagem_contato
+{
+   width: 100%;
+}
+#titulo-contato
+{
+   width: 50%;
+   text-align: center;
+}
+#titulo-contato p
+{
+   font-size: 20pt;
+}
+#contato article
+{
+   width: 50%;
+   display: inline-block;
+}
+.linhadcontato
+{
+   width: 150px;
+}
+
+.borda_c
+{
+   border-top: none;
+   border-left: none;
+   border-right: none;
+   outline: none;
+   margin-right: 10px;
+   padding: 10px;
+   background-color: transparent;
+   border-bottom: 1px solid black;
+}
+.mt
+{
+   margin-top: 20px;
+}
+
+.ml
+{
+   margin-left: 20px;
+}
+
+#forma_contato
+{
+   display: flex;
+   width: 50%;
+   justify-content: space-between;
+   margin-left: 20px;
+   margin-top: 20px;
+}
+#forma_contato div
+{
+   display: inline;
+   margin-right: 30px;
+}
+#formulario form textarea
+{
+   resize: none;
+   width: 388px;
+}
+#btn-contato
+{
+   width: 50%;
+   display: flex;
+   justify-content: center;
+}
+#button
+{
+   
+   margin-top: 20px;
+   padding: 10px;
+   background-color: transparent;
+   border: solid 1px black;
+   transition: 0.3s;
+}
+#button:hover
+{
+   background-color: #4bbce9;
+   cursor: url(img/cursordois.cur), pointer
+}
+/* FIM CONTATO */
