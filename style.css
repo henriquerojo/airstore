@@ -434,32 +434,50 @@ body a
    background-color: #4bbce9;
    cursor: url(img/cursordois.cur), pointer
 }
+
 #anc-contato
 {
    width: 100%;
-   margin-right: 20px;
+   padding-right: 20px;
    justify-content: end;
    display: flex;
 }
 
 #anc-contato div
 {
+   display: flex;
+   align-items: center;
    background-color: #9e9595;
    text-align: center;
    color: white;
    width: 40px;
+   height: 40px;
 }
 
-anc-contato div:hover
+#anc-contato div:hover
 {
    cursor: pointer;
    color: black;
    background-color: white;
 }
 
-anc-contato div a
+#anc-contato div a
 {
+   height: 100%;
+   width: 100%;
+   text-align: center;
    text-decoration: none;
-   font-size: 15pt;
+   font-size: 20pt;
+   font-weight: bold;
+   color: white;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+#anc-contato div a:hover
+{
+   color: black;
+   cursor: pointer;
 }
 /* FIM CONTATO */
